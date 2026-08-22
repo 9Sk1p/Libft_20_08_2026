@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+//First PART
 int	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
@@ -40,5 +41,8 @@ size_t	ft_strlen(const char *str);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_strrchr(const char *s, int c);
+//End of First PART
+//Second Part
+
 
 #endif
