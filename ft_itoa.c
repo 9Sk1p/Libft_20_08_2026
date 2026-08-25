@@ -6,13 +6,13 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 14:53:19 by yhubaren          #+#    #+#             */
-/*   Updated: 2026/08/24 16:59:32 by marvin           ###   ########.fr       */
+/*   Updated: 2026/08/25 16:04:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int get_len(long n)
+static int	get_len(long n)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ static int get_len(long n)
 	return (i);	
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int len;
 	long	nb;

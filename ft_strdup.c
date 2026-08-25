@@ -6,13 +6,13 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/22 15:41:13 by yhubaren          #+#    #+#             */
-/*   Updated: 2026/08/22 16:47:02 by marvin           ###   ########.fr       */
+/*   Updated: 2026/08/25 16:02:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
 	size_t	i;
 	char	*dst;
