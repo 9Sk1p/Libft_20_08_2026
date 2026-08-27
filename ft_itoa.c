@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 14:53:19 by yhubaren          #+#    #+#             */
-/*   Updated: 2026/08/25 16:04:04 by marvin           ###   ########.fr       */
+/*   Updated: 2026/08/27 19:38:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ static int	get_len(long n)
 		n = n / 10;
 		i++;
 	}
-	return (i);	
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	int len;
+	int		len;
 	long	nb;
 	char	*str;
 
-	nb = n;	
+	nb = n;
 	len = get_len(nb);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)

@@ -6,16 +6,16 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:00:48 by yhubaren          #+#    #+#             */
-/*   Updated: 2026/08/24 18:56:27 by marvin           ###   ########.fr       */
+/*   Updated: 2026/08/27 15:32:35 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	size_t start;
-	size_t end;
+	size_t	start;
+	size_t	end;
 
 	start = 0;
 	end = ft_strlen(s1);
@@ -24,6 +24,6 @@ char *ft_strtrim(const char *s1, const char *set)
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	while (end > start && ft_strchr(set, s1[end - 1]))
-    	end--;
+		end--;
 	return (ft_substr(s1, start, end - start));
 }
