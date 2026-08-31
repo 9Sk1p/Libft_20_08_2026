@@ -6,7 +6,7 @@
 /*   By: yhubaren <yhubaren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:00:24 by yhubaren          #+#    #+#             */
-/*   Updated: 2026/08/25 20:18:08 by yhubaren         ###   ########.fr       */
+/*   Updated: 2026/08/31 20:41:47 by yhubaren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,12 @@ static void	*free_array(char **strs, int count)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_split_words(char **res, char const *s, char c, size_t words)
 {
-	char	**res;
 	size_t	i;
 	size_t	j;
 	size_t	start;
-	size_t	words;
 
-	if (!s)
-		return (NULL);
-	words = count_words(s, c);
-	res = (char **)malloc(sizeof(char *) * (words + 1));
-	if (!res)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (j < words)
@@ -75,4 +67,18 @@ char	**ft_split(char const *s, char c)
 	}
 	res[j] = NULL;
 	return (res);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	size_t	words;
+
+	if (!s)
+		return (NULL);
+	words = count_words(s, c);
+	res = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!res)
+		return (NULL);
+	return (ft_split_words(res, s, c, words));
 }
